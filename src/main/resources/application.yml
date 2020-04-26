@@ -11,8 +11,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/fishing_lab?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
-    username: 
-    password: 
+    username: fishing_lab
+    password: Fishinglab#1
   jpa:
     database: MYSQL
     hibernate:

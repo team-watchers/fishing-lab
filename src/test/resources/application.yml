@@ -1,19 +1,26 @@
-# Active environment 
+# Test
 spring:
   profiles:
-    active: local # 기본 환경 선택
+    active: local
 
+# local 환경
 ---
-
-# Local
 spring:
   profiles: local
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/fishing_lab?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
-    username: 
-    password: 
+    platform: h2
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
   jpa:
-    database: MYSQL
+    properties:
+      hibernate:
+        jdbc:
+          timezone: UTC
+    database: h2
     hibernate:
       ddl-auto: update
+    generate-ddl: true
+    show-sql: false
+    database-platform: org.hibernate.dialect.H2Dialect
