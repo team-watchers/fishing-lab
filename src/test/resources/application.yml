@@ -1,0 +1,19 @@
+# Active environment 
+spring:
+  profiles:
+    active: local # 기본 환경 선택
+
+---
+
+# Local
+spring:
+  profiles: local
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/fishing_lab?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
+    username: 
+    password: 
+  jpa:
+    database: MYSQL
+    hibernate:
+      ddl-auto: update
