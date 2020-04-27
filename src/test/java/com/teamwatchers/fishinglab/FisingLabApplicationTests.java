@@ -1,4 +1,4 @@
-package com.teamwatchers.fisinglab;
+package com.teamwatchers.fishinglab;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
